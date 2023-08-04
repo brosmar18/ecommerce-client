@@ -16,7 +16,16 @@ const NavBar = () => {
 
   return (
     <Box>
-      NavBar
+      <Box>
+        <Box>
+          Ecommerce Website
+          <Box>
+            <IconButton>
+              <SearchOutlined />
+            </IconButton>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   )
 }
