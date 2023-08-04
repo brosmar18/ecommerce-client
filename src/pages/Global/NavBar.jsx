@@ -47,10 +47,10 @@ const NavBar = () => {
           columnGap="20px"
           zIndex="2"
         >
-          <IconButton>
+          <IconButton sx={{ color: "black"}}>
             <SearchOutlined />
           </IconButton>
-          <IconButton>
+          <IconButton sx={{ color: "black"}}>
             <PersonOutline />
           </IconButton>
           <Badge>
