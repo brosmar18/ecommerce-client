@@ -22,7 +22,7 @@ const FlexBox = styled(Box)`
 const CartMenu = () => {
   return (
     <div>
-      
+      <h1>Cart Menu</h1>
     </div>
   )
 }
