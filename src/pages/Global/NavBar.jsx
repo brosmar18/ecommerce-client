@@ -15,8 +15,25 @@ const NavBar = () => {
 
 
   return (
-    <Box>
-      <Box>
+    <Box
+      display="flex"
+      alignItems="center"
+      width="100%"
+      height="60px"
+      backgroundColor="rgba(255, 255, 255, 0.95)"
+      color="black"
+      position="fixed"
+      top="0"
+      left="0"
+      zIndex="1"
+    >
+      <Box
+        width="80%"
+        margin="auto"
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <Box>
           Ecommerce Website
         </Box>
