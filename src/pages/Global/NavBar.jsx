@@ -8,10 +8,12 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
 import { shades } from '../../theme';
+import { setIsCartOpen } from '../../state';
 
 const NavBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
 
 
   return (
@@ -36,7 +38,7 @@ const NavBar = () => {
       >
         <Box
           onClick={() => navigate("/")}
-          sx={{ "&:hover": {cursor: "pointer"}}}
+          sx={{ "&:hover": { cursor: "pointer" } }}
           color={shades.secondary[500]}
         >
           Ecommerce Website
@@ -47,18 +49,19 @@ const NavBar = () => {
           columnGap="20px"
           zIndex="2"
         >
-          <IconButton sx={{ color: "black"}}>
+          <IconButton sx={{ color: "black" }}>
             <SearchOutlined />
           </IconButton>
-          <IconButton sx={{ color: "black"}}>
+          <IconButton sx={{ color: "black" }}>
             <PersonOutline />
           </IconButton>
-          <Badge>
-            <IconButton>
+            <IconButton 
+              sx={{ color: "black" }}
+              onClick={() => dispatch(setIsCartOpen({}))}
+            >
               <ShoppingBagOutlined />
             </IconButton>
-          </Badge>
-          <IconButton>
+          <IconButton sx={{ color: "black" }}>
             <MenuOutlined />
           </IconButton>
         </Box>
