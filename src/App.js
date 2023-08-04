@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import {
   BrowserRouter,
-  Routes, 
+  Routes,
   Route,
   useLocation
 } from 'react-router-dom';
@@ -22,6 +22,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
