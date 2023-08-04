@@ -29,11 +29,30 @@ const CartMenu = () => {
         return total + item.count * item.attributes.price;
     }, 0);
 
-    
+
   return (
-    <div>
-      <h1>Cart Menu</h1>
-    </div>
+    <Box
+        display={isCartOpen ? "block" : "none"}
+        backgroundColor="rgba(0, 0, 0, 0.4)"
+        position="fixed"
+        zIndex={10}
+        width="100%"
+        height="100%"
+        left="0"
+        top="0"
+        overflow="auto"
+    >
+        <Box>
+            <Box>
+                <FlexBox>
+                    <Typography>Shopping Bag</Typography>
+                    <IconButton>
+                        <CloseIcon />
+                    </IconButton>
+                </FlexBox>
+            </Box>
+        </Box>
+    </Box>
   )
 }
 
