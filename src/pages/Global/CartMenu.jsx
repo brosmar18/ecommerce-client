@@ -71,6 +71,16 @@ const CartMenu = () => {
                                             src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                                         />
                                     </Box>
+                                    <Box flex="1 1 60%">
+                                        <FlexBox mb="5px">
+                                            <Typography fontWeight="bold">
+                                                {item.attributes.name}
+                                            </Typography>
+                                            <IconButton>
+                                                
+                                            </IconButton>
+                                        </FlexBox>
+                                    </Box>
                                 </FlexBox>
                             </Box>
                         ))}
