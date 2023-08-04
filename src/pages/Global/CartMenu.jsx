@@ -116,6 +116,18 @@ const CartMenu = () => {
                             <Typography fontWeight="blold">SUBTOTAL</Typography>
                             <Typography fontWeight="blold">${totalPrice}</Typography>
                         </FlexBox>
+                        <Button
+                            sx={{
+                                backgroundColor: shades.primary[400],
+                                color: "white",
+                                borderRadius: 0,
+                                minWidth: "100%",
+                                padding: "20px 40px",
+                                m: "20px 0"
+                            }}
+                        >
+                            CHECKOUT
+                        </Button>
                     </Box>
                 </Box>
             </Box>
