@@ -109,6 +109,14 @@ const CartMenu = () => {
                             </Box>
                         ))}
                     </Box>
+
+                    {/* ACTIONS */}
+                    <Box mb="20px 0">
+                        <FlexBox m="20px 0">
+                            <Typography fontWeight="blold">SUBTOTAL</Typography>
+                            <Typography fontWeight="blold">${totalPrice}</Typography>
+                        </FlexBox>
+                    </Box>
                 </Box>
             </Box>
         </Box>
