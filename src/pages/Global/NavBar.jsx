@@ -19,23 +19,26 @@ const NavBar = () => {
       <Box>
         <Box>
           Ecommerce Website
-          <Box>
+        </Box>
+        <Box>
+          <IconButton>
+            <SearchOutlined />
+          </IconButton>
+          <IconButton>
+            <PersonOutline />
+          </IconButton>
+          <Badge>
             <IconButton>
-              <SearchOutlined />
+              <ShoppingBagOutlined />
             </IconButton>
-            <IconButton>
-              <PersonOutline />
-            </IconButton>
-            <Badge>
-              <IconButton>
-                <ShoppingBagOutlined />
-              </IconButton>
-            </Badge>
-          </Box>
+          </Badge>
+          <IconButton>
+            <MenuOutlined />
+          </IconButton>
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 export default NavBar;
