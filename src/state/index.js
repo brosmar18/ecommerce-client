@@ -15,6 +15,8 @@ const initialState = {
             state.items = action.payload;
         },
 
-        
+        addToCart: (state, action) => {
+            state.cart = [...state.cart, action.payload.item];
+          },
     }
   })
