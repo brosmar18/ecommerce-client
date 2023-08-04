@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import ItemDetails from './pages/ItemDetails/ItemDetails';
 import Checkout from './pages/Checkout/Checkout';
 import Confirmation from './pages/Checkout/Confirmation';
+import NavBar from './pages/Global/NavBar';
 
 
 const ScrollToTop = () => {
@@ -27,6 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="item/:itemId" element={<ItemDetails />} />
