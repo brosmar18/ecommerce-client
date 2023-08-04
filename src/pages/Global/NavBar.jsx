@@ -34,7 +34,11 @@ const NavBar = () => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Box>
+        <Box
+          onClick={() => navigate("/")}
+          sx={{ "&:hover": {cursor: "pointer"}}}
+          color={shades.secondary[500]}
+        >
           Ecommerce Website
         </Box>
         <Box>
