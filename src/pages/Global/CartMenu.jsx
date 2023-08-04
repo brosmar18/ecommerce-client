@@ -64,7 +64,7 @@ const CartMenu = () => {
                                     <Box
                                         flex="1 1 40%"
                                     >
-                                        <img 
+                                        <img
                                             alt={item?.name}
                                             width="123px"
                                             height="164px"
@@ -88,21 +88,20 @@ const CartMenu = () => {
                                                 border={`1.5px solid ${shades.neutral[500]}`}
                                             >
                                                 <IconButton
-                                                    onClick={() => dispatch(decreaseCount({ id: item.id}))}
+                                                    onClick={() => dispatch(decreaseCount({ id: item.id }))}
                                                 >
                                                     <RemoveIcon />
                                                 </IconButton>
                                                 <Typography>{item.count}</Typography>
                                                 <IconButton
-                                                    onClick={() => dispatch(increaseCount({ id: item.id}))}
+                                                    onClick={() => dispatch(increaseCount({ id: item.id }))}
                                                 >
                                                     <AddIcon />
                                                 </IconButton>
                                             </Box>
+                                            {/* Price */}
+                                            <Typography fontWeight="bold">${item.attributes.price}</Typography>
                                         </FlexBox>
-
-                                        {/* Price */}
-                                        <Typography fontWeight="bold">${item.attributes.price}</Typography>
                                     </Box>
                                 </FlexBox>
                                 <Divider />
