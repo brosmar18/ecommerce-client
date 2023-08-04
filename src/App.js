@@ -6,6 +6,8 @@ import {
   useLocation
 } from 'react-router-dom';
 
+import Home from './pages/Home/Home';
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -19,7 +21,11 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <BrowserRouter></BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
