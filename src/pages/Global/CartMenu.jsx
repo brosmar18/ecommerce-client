@@ -57,6 +57,24 @@ const CartMenu = () => {
                             <CloseIcon />
                         </IconButton>
                     </FlexBox>
+                    <Box>
+                        {cart.map((item) => (
+                            <Box key={`${item.attributes.name}-${item.id}`}>
+                                <FlexBox p="15px 0">
+                                    <Box
+                                        flex="1 1 40%"
+                                    >
+                                        <img 
+                                            alt={item?.name}
+                                            width="123px"
+                                            height="164px"
+                                            src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                                        />
+                                    </Box>
+                                </FlexBox>
+                            </Box>
+                        ))}
+                    </Box>
                 </Box>
             </Box>
         </Box>
