@@ -26,6 +26,11 @@ const NavBar = () => {
             <IconButton>
               <PersonOutline />
             </IconButton>
+            <Badge>
+              <IconButton>
+                <ShoppingBagOutlined />
+              </IconButton>
+            </Badge>
           </Box>
         </Box>
       </Box>
