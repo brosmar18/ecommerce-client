@@ -125,6 +125,10 @@ const CartMenu = () => {
                                 padding: "20px 40px",
                                 m: "20px 0"
                             }}
+                            onClick={() => {
+                                navigate("/checkout");
+                                dispatch(setIsCartOpen({}));
+                            }}
                         >
                             CHECKOUT
                         </Button>
