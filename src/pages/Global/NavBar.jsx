@@ -10,10 +10,14 @@ import { useNavigate } from "react-router-dom";
 import { shades } from '../../theme';
 
 const NavBar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+
   return (
-    <div>
-      NavBar
-    </div>
+    <Box>
+      
+    </Box>
   )
 }
 
