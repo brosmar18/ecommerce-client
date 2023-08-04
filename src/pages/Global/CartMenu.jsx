@@ -112,8 +112,8 @@ const CartMenu = () => {
                     {/* ACTIONS */}
                     <Box mb="20px 0">
                         <FlexBox m="20px 0">
-                            <Typography fontWeight="blold">SUBTOTAL</Typography>
-                            <Typography fontWeight="blold">${totalPrice}</Typography>
+                            <Typography fontWeight="bold">SUBTOTAL</Typography>
+                            <Typography fontWeight="bold">${totalPrice}</Typography>
                         </FlexBox>
                         <Button
                             sx={{
