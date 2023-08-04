@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <Box>
-      
+      NavBar
     </Box>
   )
 }
