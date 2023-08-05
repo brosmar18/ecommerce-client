@@ -48,7 +48,20 @@ const ShoppingList = () => {
       <Typography variant="h3" textAlign="center">
         Our Featured <b>Products</b>
       </Typography>
-      <Tabs>
+      <Tabs
+        textColor="primary"
+        indicatorColor="primary"
+        value={value}
+        onChange={handleChange}
+        centered
+        TabIndicatorProps={{ sx: { display: isNonMobile ? "block" : "none"}}}
+        sx={{
+          m: '25px',
+          '& .MuiTabs-FlexContainer': {
+            flexWrap: 'wrap',
+          },
+        }}
+      >
         <Tab label="ALL" value='all' />
         <Tab label='NEW ARRIVALS' value='newArrivals' />
         <Tab label='BEST SELLERS' value='bestSellers' />
