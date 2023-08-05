@@ -14,7 +14,14 @@ const Subscribe = () => {
       <Typography>
         and receive 30% off your first order at checkout
       </Typography>
-      <Box>
+      <Box
+        p="2px 4px"
+        m="15px auto"
+        display="flex"
+        alignItems="center"
+        width="75%"
+        backgroundColor="#F2F2F2"
+      >
         <InputBase 
           placeholder="Enter Email"
           sx={{ ml: 1, flex: 1}}
