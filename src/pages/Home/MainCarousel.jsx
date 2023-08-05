@@ -18,11 +18,14 @@ const importAll = (r) =>
 
 
 const MainCarousel = () => {
+  const isNonMobile = useMediaQuery('(min-width:600px)');
+
+  
   return (
     <div>
       <h1>Main Carousel</h1>
     </div>
-  )
+  );
 }
 
 export default MainCarousel;
