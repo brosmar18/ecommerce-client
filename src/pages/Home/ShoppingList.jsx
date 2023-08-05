@@ -23,7 +23,7 @@ const ShoppingList = () => {
   async function getItems() {
     const items = await fetch(
       "http://localhost:1337/api/items?populate=image",
-      { method: "GET"}
+      { method: "GET" }
     );
     const itemsJson = await items.json();
     dispatch(setItems(itemsJson.data));
@@ -45,7 +45,15 @@ const ShoppingList = () => {
 
   return (
     <Box width="80%" margin="80px auto">
-      <Typography variant="h3" textAlign="center">Our Featured <b>Products</b></Typography>
+      <Typography variant="h3" textAlign="center">
+        Our Featured <b>Products</b>
+      </Typography>
+      <Tabs>
+        <Tab label="ALL" value='all' />
+        <Tab label='NEW ARRIVALS' value='newArrivals' />
+        <Tab label='BEST SELLERS' value='bestSellers' />
+        <Tab label='TOP RATED' value='topRated' />
+      </Tabs>
     </Box>
   )
 }
