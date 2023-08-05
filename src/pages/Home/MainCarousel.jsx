@@ -71,6 +71,13 @@ const MainCarousel = () => {
               backgroundAttachment: 'fixed',
             }}
           />
+          <Box>
+            <Typography>-- NNEW ITEMS</Typography>
+            <Typography>Summer Sale</Typography>
+            <Typography>
+              Discover More
+            </Typography>
+          </Box>
         </Box>
       ))}
     </Carousel>
