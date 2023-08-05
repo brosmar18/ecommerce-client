@@ -44,9 +44,9 @@ const ShoppingList = () => {
 
 
   return (
-    <div>
-      <h1>ShoppingList</h1>
-    </div>
+    <Box>
+      <Typography>Our Featured <b>Products</b></Typography>
+    </Box>
   )
 }
 
