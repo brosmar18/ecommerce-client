@@ -28,9 +28,11 @@ const Subscribe = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
+        <Divider sx={{ height: 28, m: 0.5}} orientation="vertical" />
+        <Typography sx={{ p: '10px', ':hover' : {cursor: 'pointer'}}}>Subscribe</Typography>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 export default Subscribe;
