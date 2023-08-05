@@ -41,6 +41,20 @@ function Footer() {
                     <Typography>Corporate & Bulk Purchasing</Typography>
                     <Typography>Returns</Typography>
                 </Box>
+                <Box>
+                    <Typography>
+                        Contact Us
+                    </Typography>
+                    <Typography>
+                        423 SouthLane Street, NW, Narnia, NV 3920
+                    </Typography>
+                    <Typography>
+                        Email: ecommercewebsite@email.com
+                    </Typography>
+                    <Typography>
+                        (378) 730-9389
+                    </Typography>
+                </Box>
             </Box>
         </Box>
     )
