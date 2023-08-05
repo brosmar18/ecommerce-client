@@ -4,6 +4,7 @@ import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined
 
 
 const Subscribe = () => {
+  const [email, setEmail] = useState("");
   return (
     <div>
       <h1>Subscribe</h1>
