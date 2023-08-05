@@ -32,6 +32,16 @@ const ShoppingList = () => {
     getItems();
   }, []) // esliint-disable-line react-hooks/exhaustive-deps
 
+  const topRatedItems = items.filter(
+    (item) => item.attributes.category === 'topRated'
+  );
+  const newArrivalsItems = items.filter(
+    (item) => item.attributes.category === 'newArrivals'
+  );
+  const bestSellersItems = items.filter(
+    (item) => item.attributes.category === 'bestSellers'
+  );
+
 
   return (
     <div>
