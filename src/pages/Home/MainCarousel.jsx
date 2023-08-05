@@ -84,9 +84,13 @@ const MainCarousel = () => {
             maxWidth={isNonMobile ? undefined : "240px"}
             color="white"
           >
-            <Typography>-- NNEW ITEMS</Typography>
-            <Typography>Summer Sale</Typography>
-            <Typography>
+            <Typography color={shades.secondary[200]}>-- NNEW ITEMS</Typography>
+            <Typography variant="h1">Summer Sale</Typography>
+            <Typography
+              fontWeight="bold"
+              color={shades.secondary[300]}
+              sx={{ textDecoration: "underline"}}
+            >
               Discover More
             </Typography>
           </Box>
