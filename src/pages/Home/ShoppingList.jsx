@@ -15,6 +15,10 @@ const ShoppingList = () => {
   const items = useSelector((state) => state.cart.items);
   const breakPoint = useMediaQuery("(min-width:600px)");
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   
 
   return (
