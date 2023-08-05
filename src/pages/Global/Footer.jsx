@@ -20,8 +20,13 @@ function Footer() {
                 rowGap="30px"
                 columnGap="clamp(20px, 30px, 40px)"
             >
-                <Box>
-                    <Typography>
+                <Box width="clamp(20%, 30%, 40%)">
+                    <Typography
+                        variant="h4"
+                        fontWeight="bold"
+                        mb="30px"
+                        color={shades.secondary[500]}
+                    >
                         Ecommerce Website
                     </Typography>
                     <p>
@@ -32,34 +37,34 @@ function Footer() {
                     </p>
                 </Box>
                 <Box>
-                    <Typography>
+                    <Typography variant="h4" fontWeight="bold" mb="30px">
                         About Us
                     </Typography>
-                    <Typography>Careers</Typography>
-                    <Typography>Our Stores</Typography>
-                    <Typography>Terms & Conditions</Typography>
-                    <Typography>Privacy Policy</Typography>
+                    <Typography mb="30px">Careers</Typography>
+                    <Typography mb="30px">Our Stores</Typography>
+                    <Typography mb="30px">Terms & Conditions</Typography>
+                    <Typography mb="30px">Privacy Policy</Typography>
                 </Box>
                 <Box>
-                    <Typography>
+                    <Typography variant="h4" fontWeight="bold" mb="30px">
                         Customer Service
                     </Typography>
-                    <Typography>Help Center</Typography>
-                    <Typography>Track Your Order</Typography>
-                    <Typography>Corporate & Bulk Purchasing</Typography>
-                    <Typography>Returns</Typography>
+                    <Typography mb="30px">Help Center</Typography>
+                    <Typography mb="30px">Track Your Order</Typography>
+                    <Typography mb="30px">Corporate & Bulk Purchasing</Typography>
+                    <Typography mb="30px">Returns</Typography>
                 </Box>
-                <Box>
-                    <Typography>
+                <Box width="clamp(20%, 25%, 30%)">
+                <Typography variant="h4" fontWeight="bold" mb="30px">
                         Contact Us
                     </Typography>
-                    <Typography>
+                    <Typography mb="30px">
                         423 SouthLane Street, NW, Narnia, NV 3920
                     </Typography>
-                    <Typography>
+                    <Typography mb="30px" sx={{ wordWrap: "break-word"}}>
                         Email: ecommercewebsite@email.com
                     </Typography>
-                    <Typography>
+                    <Typography mb="30px">
                         (378) 730-9389
                     </Typography>
                 </Box>
