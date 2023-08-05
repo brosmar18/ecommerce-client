@@ -27,7 +27,22 @@ const item = ({ item, width}) => {
     } = image;
 
   return (
-  )
-}
+    <Box width={width}>
+        <Box
+            position="relative"
+            onMouseOver={() => setIsHovered(true)}
+            onMouseOut={() => setIsHovered(false)}
+        >
+            <img 
+                alt={item.name}
+                width="300px"
+                height="400px"
+                src={`http://localhost:1337${url}`}
+                onClick={() => navigate(`/item/${item.id}`)}
+            />
+        </Box>
+    </Box>
+  );
+};
 
 export default item;
