@@ -10,6 +10,13 @@ import { setItems } from "../../state";
 
 
 const ShoppingList = () => {
+  const dispatch = useDispatch();
+  const [value, setValue] = useState('all');
+  const items = useSelector((state) => state.cart.items);
+  const breakPoint = useMediaQuery("(min-width:600px)");
+
+  
+
   return (
     <div>
       <h1>ShoppingList</h1>
