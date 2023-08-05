@@ -1,4 +1,7 @@
-import React from 'react';
+import { useTheme } from "@emotion/react";
+import { Box, Typography } from "@mui/material";
+import { shades } from "../../theme";
+
 
 const Footer = () => {
   return (
