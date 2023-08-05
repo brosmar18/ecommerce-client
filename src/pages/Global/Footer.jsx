@@ -23,6 +23,15 @@ function Footer() {
                         aliquip ex ea commodo consequat
                     </p>
                 </Box>
+                <Box>
+                    <Typography>
+                        About Us
+                    </Typography>
+                    <Typography>Careers</Typography>
+                    <Typography>Our Stores</Typography>
+                    <Typography>Terms & Conditions</Typography>
+                    <Typography>Privacy Policy</Typography>
+                </Box>
             </Box>
         </Box>
     )
