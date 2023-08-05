@@ -3,12 +3,10 @@ import { Box, Typography } from "@mui/material";
 import { shades } from "../../theme";
 
 
-const Footer = () => {
-  return (
-    <div>
-      <h1>Footer</h1>
-    </div>
-  )
+function Footer() {
+    return (
+        <h1>Footer</h1>
+    )
 }
 
 export default Footer;
