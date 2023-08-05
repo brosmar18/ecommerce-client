@@ -32,6 +32,15 @@ function Footer() {
                     <Typography>Terms & Conditions</Typography>
                     <Typography>Privacy Policy</Typography>
                 </Box>
+                <Box>
+                    <Typography>
+                        Customer Service
+                    </Typography>
+                    <Typography>Help Center</Typography>
+                    <Typography>Track Your Order</Typography>
+                    <Typography>Corporate & Bulk Purchasing</Typography>
+                    <Typography>Returns</Typography>
+                </Box>
             </Box>
         </Box>
     )
