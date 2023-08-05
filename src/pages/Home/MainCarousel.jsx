@@ -12,7 +12,7 @@ const importAll = (r) =>
     return acc;
   }, {});
 
-  export const heroTextureImports = importAll(
+  const heroTextureImports = importAll(
     require.context("../../assets", false, /\.(png|jpe?g|svg)$/)
   );
 
