@@ -10,6 +10,7 @@ const Subscribe = () => {
       <IconButton>
         <MarkEmailReadOutlinedIcon fontSize="large" />
       </IconButton>
+      <Typography variant="h3">Subscribe To Our Newsletter</Typography>
     </Box>
   )
 }
