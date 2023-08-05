@@ -11,6 +11,17 @@ const Subscribe = () => {
         <MarkEmailReadOutlinedIcon fontSize="large" />
       </IconButton>
       <Typography variant="h3">Subscribe To Our Newsletter</Typography>
+      <Typography>
+        and receive 30% off your first order at checkout
+      </Typography>
+      <Box>
+        <InputBase 
+          placeholder="Enter Email"
+          sx={{ ml: 1, flex: 1}}
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+      </Box>
     </Box>
   )
 }
