@@ -52,15 +52,15 @@ const ItemDetails = () => {
   }, [itemId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <Box>
-      <Box>
-        <Box>
-          <img 
+    <Box width="80%" m="80px auto">
+      <Box display="flex" flexWrap="wrap" columnGap="40px">
+        <Box flex="1 1 40%" mb="40px">
+          <img
             alt={item?.name}
             width="100%"
             height="100%"
             src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
-            style={{ objectFit: 'contain'}}
+            style={{ objectFit: 'contain' }}
           />
         </Box>
       </Box>
