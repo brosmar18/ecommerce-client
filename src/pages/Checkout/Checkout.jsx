@@ -9,8 +9,9 @@ import Payment from "./Payment";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(
-  process.env.STRIPE_PUBLISHABLE_KEY
+  process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY
 );
+
 
 
 const initialValues = {
@@ -95,7 +96,8 @@ const Checkout = () => {
   const cart = useSelector((state) => state.cart.cart);
   const isFirstStep = activeStep === 0;
   const isSecondStep = activeStep === 1;
-  console.log(STRIPE_PUBLISHABLE_KEY);
+
+
 
   const handleFormSubmit = async (values, actions) => {
     setActiveStep(activeStep + 1);
