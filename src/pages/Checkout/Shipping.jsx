@@ -1,6 +1,6 @@
 import { Box, Checkout, FormControlLabel, Typography } from '@mui/material';
 import AddressForm from './AddressForm';
-import { Add } from '@mui/icons-material';
+import { Add, CheckBox } from '@mui/icons-material';
 
 const Shipping = ({
     values,
@@ -24,6 +24,24 @@ const Shipping = ({
                     handleBlur={handleBlur}
                     handleChange={handleChange}
                 />
+            </Box>
+            <Box mb="20px">
+                <FormControlLabel 
+                label="Same as Shipping Address"
+                    control={
+                        <CheckBox 
+                            defaultChecked
+                            value={values.shippingAddress.isSameAddress}
+                            onChange={() => 
+                                setFieldValue(
+                                    "shippingAddress.isSameAddress",
+                                    !values.shippingAddress.isSameAddress
+                                )
+                            }
+                        />
+                    }
+                />
+
             </Box>
         </Box>
     )
