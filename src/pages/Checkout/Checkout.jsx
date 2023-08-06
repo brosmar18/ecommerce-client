@@ -125,7 +125,12 @@ const Checkout = () => {
           }) => (
             <form onSubmit={handleSubmit}>
               <Shipping 
-
+                    values={values}
+                    errors={errors}
+                    touched={touched}
+                    handleBlur={handleBlur}
+                    hadleChange={handleChange}
+                    setFieldValue={setFieldValue}
               />
             </form>
           )}
