@@ -20,6 +20,11 @@ const ItemDetails = () => {
   const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
 
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+
   return (
     <div>
       ItemDetails
