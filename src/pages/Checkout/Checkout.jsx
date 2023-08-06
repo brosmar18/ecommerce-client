@@ -1,4 +1,9 @@
-import React from 'react';
+import { UseSelector } from "react-redux";
+import { Box, Button, Stepper, Step, StepLabel } from '@mui/material';
+import { Formik } from "formik";
+import { useState } from 'react';
+import * as yup from 'yup';
+import { shades } from '../../theme';
 
 const Checkout = () => {
   return (
