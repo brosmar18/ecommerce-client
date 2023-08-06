@@ -10,9 +10,13 @@ const Shipping = ({
     setFieldValue,
 }) => {
   return (
-    <div>
-      <h1>Shipping</h1>
-    </div>
+    <Box m="30px auto">
+        <Box>
+            <Typography sx={{ mb: "15px"}} fontSize="18px">
+                Billing Information
+            </Typography>
+        </Box>
+    </Box>
   )
 }
 
