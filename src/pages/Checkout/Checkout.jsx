@@ -129,7 +129,7 @@ const Checkout = () => {
                     errors={errors}
                     touched={touched}
                     handleBlur={handleBlur}
-                    hadleChange={handleChange}
+                    handleChange={handleChange}
                     setFieldValue={setFieldValue}
               />
             </form>
