@@ -16,13 +16,20 @@ const Checkout = () => {
   }
 
   async function makePayment(values) {
-    
+
   }
 
   return (
-    <div>
-      <h1>Checkout</h1>
-    </div>
+    <Box width="80%" m="100px auto">
+      <Stepper activeStep={activeStep} sx={{ m: '20px 0'}}>
+        <Step>
+          <StepLabel>Billing</StepLabel>
+        </Step>
+        <Step>
+          <StepLabel>Payment</StepLabel>
+        </Step>
+      </Stepper>
+    </Box>
   )
 }
 
