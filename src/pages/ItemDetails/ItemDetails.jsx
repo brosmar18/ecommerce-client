@@ -63,6 +63,17 @@ const ItemDetails = () => {
             style={{ objectFit: 'contain' }}
           />
         </Box>
+        <Box>
+          <Box>
+            <Box>Home/Item</Box>
+            <Box>Prev Next</Box>
+          </Box>
+          <Box>
+            <Typography>{item?.attributes?.name}</Typography>
+            <Typography>${item?.attributes?.price}</Typography>
+            <Typography>{item?.attributes?.longDescription}</Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   )
