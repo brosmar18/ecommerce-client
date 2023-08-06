@@ -123,6 +123,14 @@ const ItemDetails = () => {
         )}
         {value === 'reviews' && <div>reviews</div>}
       </Box>
+      <Box>
+        <Typography>Related Products</Typography>
+        <Box>
+          {items.slice(0, 4).map((item, i) => (
+            <Item key={`${item.name}-${i}`} item={item} />
+          ))}
+        </Box>
+      </Box>
     </Box>
   )
 }
