@@ -71,7 +71,7 @@ const ItemDetails = () => {
           <Box m="65px 0 25px 0">
             <Typography variant="h3">{item?.attributes?.name}</Typography>
             <Typography>${item?.attributes?.price}</Typography>
-            <Typography sx={{ mt: "20px" }}>{item?.attributes?.longDescription}</Typography>
+            <Typography sx={{ mt: "20px" }}>{item?.attributes?.shortDescription}</Typography>
           </Box>
           <Box display="flex" alignItems="center" minHeight="50px">
             <Box
@@ -110,6 +110,18 @@ const ItemDetails = () => {
             <Typography>CATEGORIES: {item?.attributes?.category}</Typography>
           </Box>
         </Box>
+      </Box>
+      <Box>
+        <Tabs>
+          <Tab label="DESCRIPTION" value="description" />
+          <Tab label="REVIEWS" value="reviews" />
+        </Tabs>
+      </Box>
+      <Box>
+        {value === 'description' && (
+          <div>{item?.attributes?.longDescription}</div>
+        )}
+        {value === 'reviews' && <div>reviews</div>}
       </Box>
     </Box>
   )
