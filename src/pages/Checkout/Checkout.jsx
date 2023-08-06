@@ -5,6 +5,32 @@ import { useState } from 'react';
 import * as yup from 'yup';
 import { shades } from '../../theme';
 
+const initialValues = {
+  billingAddress: {
+    firstName: "",
+    lastName: "",
+    contry: "",
+    street1: "",
+    street2: "",
+    city: "",
+    state: "",
+    zipCode: "",
+  },
+  shippingAddress: {
+    isSameAddress: true,
+    firstName: "",
+    lastName: "",
+    contry: "",
+    street1: "",
+    street2: "",
+    city: "",
+    state: "",
+    zipCode: "",
+  },
+  email: "",
+  phoneNumber: "",
+}
+
 const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
   const cart = useSelector((state) => state.cart.cart);
@@ -29,6 +55,15 @@ const Checkout = () => {
           <StepLabel>Payment</StepLabel>
         </Step>
       </Stepper>
+      <Box>
+        <Formik
+          onSubmit={handleFormSubmit}
+          initialValues={initialValues}
+          validationSchema={}
+        >
+
+        </Formik>
+      </Box>
     </Box>
   )
 }
