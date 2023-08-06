@@ -35,6 +35,19 @@ const ItemDetails = () => {
     setItem(itemJson.data);
   }
 
+  async function getItems() {
+    const items = await fetch(
+      `http://localhost:1337/api/items?populate=image`,
+      {
+        method: 'GET',
+      }
+    );
+    const itemJson = await items.json();
+    setItems(itemJson.data);
+  }
+
+  
+
   return (
     <div>
       ItemDetails
