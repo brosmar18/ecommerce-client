@@ -111,13 +111,13 @@ const ItemDetails = () => {
           </Box>
         </Box>
       </Box>
-      <Box>
-        <Tabs>
+      <Box m="20px 0">
+        <Tabs value={value} onChange={handleChange}>
           <Tab label="DESCRIPTION" value="description" />
           <Tab label="REVIEWS" value="reviews" />
         </Tabs>
       </Box>
-      <Box>
+      <Box display="flex" flexWrap="wrap" gap="15px">
         {value === 'description' && (
           <div>{item?.attributes?.longDescription}</div>
         )}
