@@ -4,6 +4,7 @@ import { Formik } from "formik";
 import { useState } from 'react';
 import * as yup from 'yup';
 import { shades } from '../../theme';
+import Shipping from './Shipping';
 
 const initialValues = {
   billingAddress: {
@@ -93,9 +94,9 @@ const Checkout = () => {
     setActiveStep(activeStep + 1);
   }
 
-  async function makePayment(values) {
+  // async function makePayment(values) {
 
-  }
+  // }
 
   return (
     <Box width="80%" m="100px auto">
@@ -113,7 +114,21 @@ const Checkout = () => {
           initialValues={initialValues}
           validationSchema={checkoutSchema[activeStep]}
         >
+          {({
+            values,
+            errors,
+            touched,
+            handleBlur,
+            handleChange,
+            handleSubmit,
+            setFieldValue
+          }) => (
+            <form onSubmit={handleSubmit}>
+              <Shipping 
 
+              />
+            </form>
+          )}
         </Formik>
       </Box>
     </Box>
