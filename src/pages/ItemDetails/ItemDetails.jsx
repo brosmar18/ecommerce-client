@@ -63,15 +63,15 @@ const ItemDetails = () => {
             style={{ objectFit: 'contain' }}
           />
         </Box>
-        <Box>
-          <Box>
+        <Box flex="1 1 50%" mb="40px">
+          <Box display="flex" justifyContent="space-between">
             <Box>Home/Item</Box>
             <Box>Prev Next</Box>
           </Box>
-          <Box>
-            <Typography>{item?.attributes?.name}</Typography>
+          <Box m="65px 0 25px 0">
+            <Typography variant="h3">{item?.attributes?.name}</Typography>
             <Typography>${item?.attributes?.price}</Typography>
-            <Typography>{item?.attributes?.longDescription}</Typography>
+            <Typography sx={{ mt: "20px" }}>{item?.attributes?.longDescription}</Typography>
           </Box>
         </Box>
       </Box>
