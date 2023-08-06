@@ -11,6 +11,7 @@ const AddressForm = ({
     handleBlur,
     handleChange,
 }) => {
+    const isNonMobile = useMediaQuery('(min-width:600px)');
     return (
         <div>
             Address Form
