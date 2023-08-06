@@ -11,6 +11,14 @@ const Checkout = () => {
   const isFirstStep = activeStep === 0;
   const isSecondStep = activeStep === 1;
 
+  const handleFormSubmit = async (value, actions) => {
+    setActiveStep(activeStep + 1);
+  }
+
+  async function makePayment(values) {
+    
+  }
+
   return (
     <div>
       <h1>Checkout</h1>
