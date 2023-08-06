@@ -32,7 +32,7 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
                 sx={{ gridColumn: "span 4" }}
             />
         </Box>
-    )
-}
+    );
+};
 
 export default Payment;
