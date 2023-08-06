@@ -102,6 +102,13 @@ const ItemDetails = () => {
               ADD TO CART
             </Button>
           </Box>
+          <Box>
+            <Box>
+              <FavoriteBorderOutlinedIcon />
+              <Typography>ADD TO WISHLIST</Typography>
+            </Box>
+            <Typography>CATEGORIES: {item?.attributes?.category}</Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
