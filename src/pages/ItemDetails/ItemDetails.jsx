@@ -73,6 +73,20 @@ const ItemDetails = () => {
             <Typography>${item?.attributes?.price}</Typography>
             <Typography sx={{ mt: "20px" }}>{item?.attributes?.longDescription}</Typography>
           </Box>
+          <Box>
+            <Box>
+              <IconButton>
+                <RemoveIcon />
+              </IconButton>
+              <Typography>{count}</Typography>
+              <IconButton>
+                <AddIcon />
+              </IconButton>
+            </Box>
+            <Button>
+              ADD TO CART
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Box>
