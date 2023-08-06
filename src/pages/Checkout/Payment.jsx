@@ -19,6 +19,18 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
                 helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 4", marginBottom: "15px" }}
             />
+            <TextField
+                fullWidth
+                type="text"
+                label="Phone Number"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.phoneNumber}
+                name="phoneNumber"
+                error={!!touched.phoneNumber && !!errors.phoneNumber}
+                helperText={touched.phoneNumber && errors.phoneNumber}
+                sx={{ gridColumn: "span 4" }}
+            />
         </Box>
     )
 }
