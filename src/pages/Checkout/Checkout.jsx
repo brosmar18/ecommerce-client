@@ -5,6 +5,7 @@ import { useState } from 'react';
 import * as yup from 'yup';
 import { shades } from '../../theme';
 import Shipping from './Shipping';
+import Payment from "./Payment";
 
 const initialValues = {
   billingAddress: {
