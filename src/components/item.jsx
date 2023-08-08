@@ -16,16 +16,23 @@ const Item = ({ item, width }) => {
     palette: { neutral },
   } = useTheme();
 
-  const { category, price, name, image } = item.attributes;
+  // Destructuring attributes and nested image data
   const {
-    data: {
-      attributes: {
-        formats: {
-          medium: { url },
-        },
-      },
-    },
-  } = image;
+    attributes: {
+      category,
+      price,
+      name,
+      image: {
+        data: {
+          attributes: {
+            formats: {
+              medium: { url = "" } = {},  // Defaulting URL to an empty string in case it's undefined
+            } = {},
+          } = {},
+        } = {},
+      } = {},
+    } = {},
+  } = item;
 
   return (
     <Box width={width}>
@@ -35,46 +42,47 @@ const Item = ({ item, width }) => {
         onMouseOut={() => setIsHovered(false)}
       >
         <img
-          alt={item.name}
+          alt={name}
           width="300px"
           height="400px"
           src={url}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
-        <Box
-          display={isHovered ? "block" : "none"}
-          position="absolute"
-          bottom="10%"
-          left="0"
-          width="100%"
-          padding="0 5%"
-        >
-          <Box display="flex" justifyContent="space-between">
-            <Box
-              display="flex"
-              alignItems="center"
-              backgroundColor={shades.neutral[100]}
-              borderRadius="3px"
-            >
-              <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
-                <RemoveIcon />
-              </IconButton>
-              <Typography color={shades.primary[300]}>{count}</Typography>
-              <IconButton onClick={() => setCount(count + 1)}>
-                <AddIcon />
-              </IconButton>
+        {isHovered && (  // A more React-ish way to conditionally render elements
+          <Box
+            position="absolute"
+            bottom="10%"
+            left="0"
+            width="100%"
+            padding="0 5%"
+          >
+            <Box display="flex" justifyContent="space-between">
+              <Box
+                display="flex"
+                alignItems="center"
+                backgroundColor={shades.neutral[100]}
+                borderRadius="3px"
+              >
+                <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
+                  <RemoveIcon />
+                </IconButton>
+                <Typography color={shades.primary[300]}>{count}</Typography>
+                <IconButton onClick={() => setCount(count + 1)}>
+                  <AddIcon />
+                </IconButton>
+              </Box>
+              <Button
+                onClick={() => {
+                  dispatch(addToCart({ item: { ...item, count } }));
+                }}
+                sx={{ backgroundColor: shades.primary[300], color: "white" }}
+              >
+                Add to Cart
+              </Button>
             </Box>
-            <Button
-              onClick={() => {
-                dispatch(addToCart({ item: { ...item, count } }));
-              }}
-              sx={{ backgroundColor: shades.primary[300], color: "white" }}
-            >
-              Add to Cart
-            </Button>
           </Box>
-        </Box>
+        )}
       </Box>
 
       <Box mt="3px">
