@@ -32,13 +32,13 @@ const ShoppingList = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const topRatedItems = items.filter(
-    (item) => item.attributes.category === "topRated"
+    (Item) => Item.attributes.category === "topRated"
   );
   const newArrivalsItems = items.filter(
-    (item) => item.attributes.category === "newArrivals"
+    (Item) => Item.attributes.category === "newArrivals"
   );
   const bestSellersItems = items.filter(
-    (item) => item.attributes.category === "bestSellers"
+    (Item) => Item.attributes.category === "bestSellers"
   );
 
   return (
