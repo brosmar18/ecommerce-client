@@ -25,25 +25,29 @@ const ItemDetails = () => {
   };
 
   async function getItem() {
-    const item = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
-      {
-        method: "GET",
+    try {
+      const response = await fetch(`http://localhost:1337/api/items/${itemId}?populate=image`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
-    );
-    const itemJson = await item.json();
-    setItem(itemJson.data);
+      const itemJson = await response.json();
+      setItem(itemJson.data);
+    } catch (error) {
+      console.error("Failed fetching item:", error);
+    }
   }
 
   async function getItems() {
-    const items = await fetch(
-      `http://localhost:1337/api/items?populate=image`,
-      {
-        method: 'GET',
+    try {
+      const response = await fetch(`http://localhost:1337/api/items?populate=image`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
-    );
-    const itemJson = await items.json();
-    setItems(itemJson.data);
+      const itemsJson = await response.json();
+      setItems(itemsJson.data);
+    } catch (error) {
+      console.error("Failed fetching items:", error);
+    }
   }
 
   useEffect(() => {
@@ -59,8 +63,7 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
-            style={{ objectFit: 'contain' }}
+            src={item?.attributes?.image?.data?.attributes?.formats?.medium?.url}
           />
         </Box>
         <Box flex="1 1 50%" mb="40px">
@@ -81,10 +84,10 @@ const ItemDetails = () => {
               mr="20px"
               p="2px 5px"
             >
-              <IconButton onClick={() => setCount(Math.max(count -1, 0))}>
+              <IconButton onClick={() => setCount(Math.max(count - 1, 0))}>
                 <RemoveIcon />
               </IconButton>
-              <Typography sx={{ p: "0 5px"}}>{count}</Typography>
+              <Typography sx={{ p: "0 5px" }}>{count}</Typography>
               <IconButton onClick={() => setCount(count + 1)}>
                 <AddIcon />
               </IconButton>
@@ -97,7 +100,7 @@ const ItemDetails = () => {
                 minWidth: "150px",
                 padding: "10px 40px"
               }}
-              onClick={() => dispatch(addToCart({ item: { ...item, count}}))}
+              onClick={() => dispatch(addToCart({ item: { ...item, count } }))}
             >
               ADD TO CART
             </Button>
