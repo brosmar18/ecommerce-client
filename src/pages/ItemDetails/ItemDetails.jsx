@@ -26,7 +26,7 @@ const ItemDetails = () => {
 
   async function getItem() {
     try {
-      const response = await fetch(`http://localhost:1337/api/items/${itemId}?populate=image`);
+      const response = await fetch(`https://server-ecommerce-o38c.onrender.com/api/items/${itemId}?populate=image`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -39,7 +39,7 @@ const ItemDetails = () => {
 
   async function getItems() {
     try {
-      const response = await fetch(`http://localhost:1337/api/items?populate=image`);
+      const response = await fetch(`https://server-ecommerce-o38c.onrender.com/api/items?populate=image`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
